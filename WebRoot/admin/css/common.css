@@ -1,0 +1,125 @@
+.List_title{
+	margin:0 0 0 20px;
+	font-family: 黑体;
+	font-size: 18px;
+	font-weight: 5;
+	vertical-align: middle;
+	text-align:left;
+	width:100%;
+}
+
+.List_column{
+	background-color: #CCF2FB;
+	margin:0 0 0 20px;
+	width:996px;
+	height: 40px;
+	float: left;
+	text-align:left;
+	vertical-align: middle;
+}
+.List_button{
+	border:1px #0000AA solid;
+	border-radius:15px;
+	margin-top:8px;
+	margin-left:2px;
+	background-color: #6AF375;
+	width: 75px;
+	height: 25px;
+	vertical-align: middle;
+}
+.List_button2{
+	border:1px #0000AA solid;
+	border-radius:15px;
+	margin-top:8px;
+	margin-left:2px;
+	background-color: #6AF375;
+	height: 25px;
+	vertical-align: middle;
+}
+.List_search{
+	position:absolute;
+	margin-top: 8px;
+	margin-left:440px;
+	width: 330px;
+}
+
+.List_info{
+	margin:0 0 0 18px;
+	width:100%;
+}
+.List_table{
+	margin:0 0 0 0px;
+	width: 100%;
+	min-width: 1000px;
+}
+.List_table tr th{
+	font-family: 黑体;
+	font-size: 14px;
+	background-color: #CCCCCC;
+}
+.List_table tr td{
+	font-family: 宋体;
+	font-size: 12px;
+	height:25px;
+	border-bottom: 1px #000000 dotted;
+}
+.longTextWrap{
+	width:200px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.longTextWrapMsg{
+	width:400px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.List_table_page{
+	font-size: 14px;
+	margin: 0 0 0 445px;
+}
+.List_search_choice{
+	font-size:10px;
+	border:1px solid #006600;
+	width: 100px;	
+	height:19px;
+	padding-top:2px;
+	-webkit-padding-before: 1px;
+}
+.List_search_input{
+	height:15px;
+	font-size:14px;
+	border:1px solid #006600;
+	padding-top: 0px;
+	-webkit-padding-before: 2px;
+	padding-bottom: 2px;
+	-webkit-padding-after: 0px;
+}
+.addTable{
+	border: 0px;
+	font-family:黑体 ;
+	font-size: 18px;
+}
+.addInput{
+	border: 1px solid #19D319;
+}
+.List_table_page a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #000000;
+}
+a.opLink{
+	text-decoration: none;
+	color: #339933;
+}
+
+.inputBox{
+	border: 1px solid #00AA00;
+}
+
+
+.chartTable{
+	border: 1px solid #00AA00;
+}
+

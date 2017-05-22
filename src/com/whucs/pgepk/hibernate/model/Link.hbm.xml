@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 指定Hiberante3映射文件的DTD信息 hibernate-mapping是映射文件的根元素 -->
+<hibernate-mapping default-lazy="false"
+	package="com.whucs.pgepk.hibernate.model">
+	<!-- 每个class元素对应一个持久化对象 -->
+	<class name="Link" table="yqlj">
+		<!-- id元素定义持久化类的标识属性 -->
+		<id name="id" column="lj_id" type="string">
+			<!-- 指定主键生成策略 -->
+			<generator class="uuid">
+			</generator>
+		</id>
+
+		<!-- property元素定义常规属性 -->
+		<property name="title" column="lj_title" type="string" not-null="true"/>
+		<property name="link" column="lj_link" type="string" not-null="true"/>
+		<property name="pic" column="lj_pic" type="org.springframework.orm.hibernate3.support.BlobByteArrayType" not-null="false"/>
+		<property name="gid" column="lj_gid" type="string" not-null="false"/>
+		<property name="gname" column="lj_gname" type="string" not-null="false"/>
+		<property name="path" column="lj_path" type="string" not-null="false"/>
+		<property name="name" column="lj_name" type="string" not-null="false"/>
+		
+	</class>
+</hibernate-mapping>

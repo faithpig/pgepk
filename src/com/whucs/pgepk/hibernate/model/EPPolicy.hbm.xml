@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 指定Hiberante3映射文件的DTD信息 hibernate-mapping是映射文件的根元素 -->
+<hibernate-mapping default-lazy="false"
+	package="com.whucs.pgepk.hibernate.model">
+	<!-- 每个class元素对应一个持久化对象 -->
+	<class name="EPPolicy" table="hbzcfg">
+		<!-- id元素定义持久化类的标识属性 -->
+		<id name="id" column="fg_id" type="string">
+			<!-- 指定主键生成策略 -->
+			<generator class="uuid">
+			</generator>
+		</id>
+
+		<!-- property元素定义常规属性 -->
+		<property name="title" column="fg_title" type="string" not-null="true"/>
+		<property name="detail" column="fg_detail" type="org.springframework.orm.hibernate3.support.ClobStringType" not-null="true"/>
+		<property name="addTime" column="fg_addtime" type="date" not-null="true"/>
+		<property name="gid" column="fg_gid" type="string" not-null="true"/>
+		<property name="gname" column="fg_gname" type="string" not-null="true"/>
+		<property name="sname" column="fg_sname" type="string" not-null="false"/>
+		<property name="count" column="fg_count" type="long" not-null="true"/>
+		<property name="haspic" column="fg_haspic" type="integer" not-null="false"/>
+		<property name="column" column="fg_column" type="string" not-null="true"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+body{
+	margin: 0 0 0 0px;
+}
+#menu{
+	background-color: #015D58;
+	width: 100%;
+	min-width: 1000px;
+	height: 30px;
+}

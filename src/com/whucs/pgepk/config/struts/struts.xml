@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Struts2配置文件的DTD信息 -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<!-- Struts2配置文件的根元素 -->
+<struts>
+	<!-- 配置了系列常量 -->
+	<constant name="struts.custom.i18n.resources" value="resource" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.multipart.maxSize" value="20971510000" />
+	<constant name="struts.devMode" value="true" />
+	<package name="default" extends="struts-default">
+   	<default-action-ref name="notFound" />
+   	<action name="notFound" class="com.whucs.pgepk.web.action.ErrorAction">
+    	<result>/404.jsp</result>
+   	</action>
+	</package>
+
+	
+	<package name="pkg_admin" namespace="/admin" extends="struts-default">
+		<action name="admAct" class="admAct">
+			<result name="login_index">/admin/Login.jsp</result>
+			<result name="login_failure">/admin/Login.jsp</result>
+			<result name="login_success">/admin/Manage.jsp</result>
+			<result name="log_out">/admin/Login.jsp</result>
+			<result name="AdminManage_enter_success">/admin/AdminManage.jsp</result>
+			<result name="updateFailure">/admin/Failure.jsp</result>
+			<result name="updateSuccess" type="redirectAction">login_reCheck</result>
+			<result name="updateAdminSuccess">/admin/Manage.jsp</result>
+			<!--  <result name="updateSuccess" type="redirectAction">admAct!login_reCheck.action</result>-->
+			<result name="deleteFailure">/admin/FailureCode.jsp</result>
+			<result name="deleteSuccess" >/admin/AdminManage.jsp</result>
+			<result name ="searchSuccess">/admin/ManageSearch.jsp</result>
+			<result name ="changeAdmin">/admin/changeAdmin.jsp</result>
+			<result name ="enterManage">/admin/Manage.jsp</result>
+		</action>
+		<action name="login_reCheck" class="admAct" method="login_reCheck">
+			<result name="login_success">/admin/Manage.jsp</result>
+			<result name="login_failure">/admin/Login.jsp</result>
+		</action>
+	</package>
+
+	<package name="pkg_contact" namespace="/contact" extends="struts-default">
+		<action name="conAct" class="conAct">
+			<result name="detail">/front/contact.jsp</result>				
+			<result name="Contact_enter_success">/admin/ContactManage.jsp</result>
+			<result name="changeFailure">/admin/Manage.jsp</result>
+			<result name="changeSuccess">/admin/Manage.jsp</result>
+		</action>
+	</package>
+
+	<package name="pkg_EPNews" namespace="/news" extends="struts-default">
+		<action name="epNewAct" class="epNewAct">
+			<result name="list">/front/hbxw/list.jsp</result>
+			<result name="detail">/front/hbxw/detail.jsp</result>	
+			<result name="notFound">/404.jsp</result>
+			<result name="fsearch">/front/hbxw/search.jsp</result>
+			<result name="EPNews_enter_success">/admin/EPNewsManage.jsp</result>
+			<result name ="enterManage">/admin/Manage.jsp</result>
+			<result name="updateFailure" >/admin/Manage.jsp</result>
+			<result name="deleteSuccess" >/admin/EPNewsManage.jsp</result>
+			<result name="searchSuccess" >/admin/ManageSearch.jsp</result>
+			<result name="VerifyForbid">/admin/Verify.jsp</result>
+			<result name="VerifySuccess">/admin/Verify.jsp</result>
+			<result name="addFailure">/admin/Manage.jsp</result>
+			<result name="addSuccess">/admin/Manage.jsp</result>
+			<result name="updateIndex">/admin/changeEPNews.jsp</result>
+			<result name="updateSuccess">/admin/Manage.jsp</result>
+		</action>
+	</package>
+
+	<package name="pkg_EPPolicy" namespace="/policy" extends="struts-default">
+		<action name="epPolAct" class="epPolAct">
+			<result name="list">/front/zcfg/list.jsp</result>
+			<result name="detail">/front/zcfg/detail.jsp</result>
+			<result name="notFound">/404.jsp</result>
+			<result name="fsearch">/front/zcfg/search.jsp</result>
+			<result name="EPPolicy_enter_success">/admin/EPPolicyManage.jsp</result>
+			<result name ="enterManage">/admin/Manage.jsp</result>
+			<result name="updateFailure" >/admin/Manage.jsp</result>
+			<result name="deleteSuccess" >/admin/EPPolicyManage.jsp</result>
+			<result name="searchSuccess" >/admin/ManageSearch.jsp</result>
+			<result name="VerifyForbid">/admin/Verify.jsp</result>
+			<result name="VerifySuccess">/admin/Verify.jsp</result>
+			<result name="addFailure">/admin/Manage.jsp</result>
+			<result name="addSuccess">/admin/Manage.jsp</result>
+			<result name="updateIndex">/admin/changeEPPolicy.jsp</result>
+			<result name="updateSuccess">/admin/Manage.jsp</result>
+		</action>
+	</package>
+
+	<package name="pkg_EPTerm" namespace="/term" extends="struts-default">
+		<action name="epTerAct" class="epTerAct">
+			<result name="list">/front/zyzs/list.jsp</result>
+			<result name="detail">/front/zyzs/detail.jsp</result>
+			<result name="notFound">/404.jsp</result>
+			<result name="fsearch">/front/zyzs/search.jsp</result>
+			<result name="EPTerm_enter_success">/admin/EPTermManage.jsp</result>
+			<result name ="enterManage">/admin/Manage.jsp</result>
+			<result name="updateFailure" >/admin/Manage.jsp</result>
+			<result name="deleteSuccess" >/admin/EPTermManage.jsp</result>
+			<result name="searchSuccess" >/admin/ManageSearch.jsp</result>
+			<result name="VerifyForbid">/admin/Verify.jsp</result>
+			<result name="VerifySuccess">/admin/Verify.jsp</result>
+			<result name="addFailure">/admin/Failure.jsp</result>
+			<result name="addSuccess">/admin/Manage.jsp</result>
+			<result name="updateIndex">/admin/changeEPTerm.jsp</result>
+			<result name="updateSuccess">/admin/Manage.jsp</result>
+		</action>
+	</package>
+
+	<package name="pkg_Home" namespace="/index" extends="struts-default">
+		<action name="homAct" class="homAct">
+			<result name="home">/front/home.jsp</result>
+		</action>
+	</package>
+
+	<package name="pkg_link" namespace="/link" extends="struts-default">
+		<action name="linAct" class="linAct">
+			<result name="list">/front/link.jsp</result>
+			<result name="Link_enter_success">/admin/LinkManage.jsp</result>
+			<result name="deleteFailure">/admin/LinkManage.jsp</result>
+			<result name="deleteSuccess">/admin/LinkManage.jsp</result>
+			<result name="updateFailure" >/admin/Manage.jsp</result>
+			<result name="updateIndex">/admin/changeLink.jsp</result>
+			<result name="updateSuccess" >/admin/Manage.jsp</result>
+			<result name="addSuccess" >/admin/Manage.jsp</result>
+			<result name="addFailure" >/admin/Manage.jsp</result>
+		</action>
+	</package>
+
+	<package name="pkg_message" namespace="/message" extends="struts-default">
+		<action name="mesAct" class="mesAct">
+			<result name="list">/front/message.jsp</result>
+			<result name="fsearch">/front/messageSearch.jsp</result>
+			<result name="Message_enter_success">/admin/MessageManage.jsp</result>
+			<result name ="searchSuccess">/admin/ManageSearch.jsp</result>
+			<result name ="deleteSuccess">/admin/MessageManage.jsp</result>
+			<result name="VerifyForbid">/admin/Verify.jsp</result>
+			<result name="VerifySuccess">/admin/Verify.jsp</result>
+			<result name="replyFailure">/admin/Manage.jsp</result>
+			<result name="replySuccess">/admin/addMessage.jsp</result>
+			<result name="replyDoFailure">/admin/Manage.jsp</result>
+			<result name="replyDoSuccess">/admin/Manage.jsp</result>
+			<result name="enterManage">/admin/Manage.jsp</result>
+		</action>
+	</package>
+	
+	<package name="pkg_Analysis" namespace="/analysis" extends="struts-default">
+		<action name="anaAct" class="anaAct">
+		<result name="Statistics_enter_success">/admin/Statistics.jsp</result>
+		<result name="statistics">/admin/charts.jsp</result>
+		<result name="statisticsDay">/admin/chartsDay.jsp</result>	
+		</action>
+	</package>
+</struts>

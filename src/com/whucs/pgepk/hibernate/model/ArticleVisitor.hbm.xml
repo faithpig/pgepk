@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 指定Hiberante3映射文件的DTD信息 hibernate-mapping是映射文件的根元素 -->
+<hibernate-mapping default-lazy="false"
+	package="com.whucs.pgepk.hibernate.model">
+	<!-- 每个class元素对应一个持久化对象 -->
+	<class name="ArticleVisitor" table="wzfwjl">
+		<!-- id元素定义持久化类的标识属性 -->
+		<id name="id" column="wzjl_id" type="string">
+			<!-- 指定主键生成策略 -->
+			<generator class="uuid">
+			</generator>
+		</id>
+		<!-- property元素定义常规属性 -->
+		<property name="enterTime" column="wzjl_entertime" type="java.util.Date" not-null="true"/>
+		<property name="closeTime" column="wzjl_closetime" type="java.util.Date" not-null="false"/>
+		<property name="totalTime" column="wzjl_totaltime" type="string" not-null="false"/>
+		<property name="ip" column="wzjl_ip" type="string" not-null="false"/>
+		<property name="type" column="wzjl_type" type="string" not-null="true"/>
+		<property name="aid" column="wzjl_aid" type="string" not-null="true"/>
+	</class>
+</hibernate-mapping>

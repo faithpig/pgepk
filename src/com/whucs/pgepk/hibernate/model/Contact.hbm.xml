@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 指定Hiberante3映射文件的DTD信息 hibernate-mapping是映射文件的根元素 -->
+<hibernate-mapping default-lazy="false"
+	package="com.whucs.pgepk.hibernate.model">
+	<!-- 每个class元素对应一个持久化对象 -->
+	<class name="Contact" table="lxwm">
+		<!-- id元素定义持久化类的标识属性 -->
+		<id name="id" column="lx_id" type="string">
+			<!-- 指定主键生成策略 -->
+			<generator class="uuid">
+			</generator>
+		</id>
+
+		<!-- property元素定义常规属性 -->
+		<property name="gid" column="lx_gid" type="string" not-null="true"/>
+		<property name="gname" column="lx_gname" type="string" not-null="false"/>
+		<property name="e_mail" column="lx_e_mail" type="string" not-null="false"/>
+		<property name="linkman" column="lx_linkman" type="string" not-null="false"/>
+		<property name="phone" column="lx_phone" type="string" not-null="false"/>
+		<property name="postcode" column="lx_postcode" type="string" not-null="false"/>
+		<property name="address" column="lx_address" type="string" not-null="false"/>
+	</class>
+</hibernate-mapping>
