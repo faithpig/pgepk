@@ -11,6 +11,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;后台由管理员管理，还实现了个访问24小时流量统计折线图的功能.<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;自己把项目部署在了: http://xcfish.cn/pgepk/<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;后台：http://www.xcfish.cn/pgepk/admin/admAct!login.action<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;用户名wa,密码123456
 </body>
 </html>
